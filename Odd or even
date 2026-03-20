@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int i = 0;
+    srand(time(0));
+
+    while (i < 10) {
+        int num = rand() % 100;  
+
+        if (num % 2 == 0) {
+            printf("%d is Even\n", num);
+        } else {
+            printf("%d is Odd\n", num);
+        }
+
+        i++;
+    }
+
+    return 0;
+}
