@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int isVowel(char ch) {
+    ch = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;
+    return (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u');
+}
+
+int main() {
+    char str[100];
+    int i = 0, count = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    while(str[i] != '\0') {
+        if(isVowel(str[i])) {
+            count++;
+        }
+        i++;
+    }
+
+    printf("Vowels = %d\n", count);
+
+    return 0;
+}
