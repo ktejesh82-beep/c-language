@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float hours, rate, wage;
+
+    printf("Enter number of hours worked: ");
+    scanf("%f", &hours);
+
+    printf("Enter wage per hour: ");
+    scanf("%f", &rate);
+
+    wage = hours * rate;
+
+    printf("Daily Wage = %.2f\n", wage);
+
+    return 0;
+}
