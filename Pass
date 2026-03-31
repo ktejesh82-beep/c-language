@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int length, i;
+    
+    char lower[] = "abcdefghijklmnopqrstuvwxyz";
+    char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char digits[] = "0123456789";
+    char symbols[] = "!@#$%^&*";
+    
+    char all[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+
+    printf("Enter password length: ");
+    scanf("%d", &length);
+
+    srand(time(NULL));
+
+    printf("Generated Password: ");
+
+    for(i = 0; i < length; i++) {
+        int index = rand() % (sizeof(all) - 1);
+        printf("%c", all[index]);
+    }
+
+    return 0;
+}
