@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float usd, inr;
+    float rate = 92.72; 
+
+    printf("Enter amount in USD: ");
+    scanf("%f", &usd);
+
+    inr = usd * rate;
+
+    printf("Equivalent amount in INR: %.2f\n", inr);
+
+    return 0;
+}
